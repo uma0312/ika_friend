@@ -1,5 +1,5 @@
 {
-	"name": "sample",
+	"name": "ika_friend",
 	"description": "イカナカマ監視",
 	"version": "1.0",
 	"manifest_version": 2,
@@ -7,6 +7,7 @@
 		{
 			"js": [
 					"jquery-2.2.0.min.js",
+					"desktop-notify-min.js",
 					"content_script.js"
 			],
 			"matches": [
@@ -17,8 +18,12 @@
 		}
 	],
 	"background": {
-		"scripts": ["background.js"],
-		"presistent": false
+		"scripts": [
+					"jquery-2.2.0.min.js",
+					"desktop-notify-min.js",
+					"background.js"
+		],
+		"presistent": true
 	},
 	"permissions": ["notifications"]
 }
